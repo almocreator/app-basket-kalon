@@ -94,22 +94,30 @@ export function MatchCard({ match, currentUser }: MatchCardProps) {
             <CardFooter className="flex justify-between gap-2 pt-0">
                 {!isFinished && currentUser ? (
                     <>
-                        <Button
-                            variant={userVote?.attendance === true ? "default" : "outline"}
-                            size="sm"
-                            className={`w-full ${userVote?.attendance === true ? "bg-green-600 hover:bg-green-700" : "hover:bg-green-50 text-green-700 border-green-200"}`}
-                            onClick={() => voteInMatch(match.id, true)}
-                        >
-                            Asistiré
-                        </Button>
-                        <Button
-                            variant={userVote?.attendance === false ? "destructive" : "outline"}
-                            size="sm"
-                            className={`w-full ${userVote?.attendance === false ? "bg-red-600" : "hover:bg-red-50 text-red-700 border-red-200"}`}
-                            onClick={() => voteInMatch(match.id, false)}
-                        >
-                            No
-                        </Button>
+                        <div className="flex gap-2 w-full">
+                            <Button
+                                variant={userVote?.attendance === true ? "default" : "outline"}
+                                size="sm"
+                                className={`flex-1 ${userVote?.attendance === true ? "bg-green-600 hover:bg-green-700" : "hover:bg-green-50 text-green-700 border-green-200"}`}
+                                onClick={() => voteInMatch(match.id, true)}
+                            >
+                                Asistiré
+                            </Button>
+                            <Button
+                                variant={userVote?.attendance === false ? "destructive" : "outline"}
+                                size="sm"
+                                className={`flex-1 ${userVote?.attendance === false ? "bg-red-600" : "hover:bg-red-50 text-red-700 border-red-200"}`}
+                                onClick={() => voteInMatch(match.id, false)}
+                            >
+                                No
+                            </Button>
+                        </div>
+                        {/* Admin/Scoreboard Button */}
+                        <a href={`/matches/${match.id}/scoreboard`} className="w-full">
+                            <Button variant="secondary" size="sm" className="w-full mt-2 bg-slate-800 text-white hover:bg-slate-700">
+                                🏀 Abrir Marcador
+                            </Button>
+                        </a>
                     </>
                 ) : !currentUser ? (
                     <p className="text-sm text-gray-500 w-full text-center">Inicia sesión para votar</p>

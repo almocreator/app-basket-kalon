@@ -104,3 +104,28 @@ export async function voteInMatch(matchId: string, attendance: boolean) {
         throw new Error("Failed to vote");
     }
 }
+
+export async function updateMatchDetails(matchId: string, details: any, homeScore: number, awayScore: number, status: string) {
+    const session = await auth();
+    // Allow admin or maybe creator? For now strict auth
+    if (!session?.user?.id) {
+        throw new Error("Unauthorized");
+    }
+
+    try {
+        await prisma.match.update({
+            where: { id: matchId },
+            data: {
+                details,
+                homeScore,
+                awayScore,
+                status
+            }
+        });
+        revalidatePath(`/matches/${matchId}/scoreboard`);
+        revalidatePath("/matches");
+    } catch (error) {
+        console.error("Failed to update match details:", error);
+        throw new Error("Failed to update match details");
+    }
+}
