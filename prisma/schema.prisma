@@ -84,11 +84,22 @@ model Authenticator {
 
 model Match {
     id        String   @id @default(cuid())
-    title     String
+    title     String?  // Made optional or we will fill it
     date      DateTime
-    location  String
-    creatorId String
-    creator   User     @relation(fields: [creatorId], references: [id])
+    location  String?
+    
+    // New Fields for Basketball App
+    opponent    String?
+    homeScore   Int?     @default(0)
+    awayScore   Int?     @default(0)
+    homeName    String?
+    awayName    String?
+    status      String?  @default("SCHEDULED") // SCHEDULED, FINISHED, LIVE
+    details     Json?    // Stores logs, stats, and extra metadata from Firebase
+    
+    creatorId String?    // Made optional for migrated matches
+    creator   User?      @relation(fields: [creatorId], references: [id])
+    
     votes     Vote[]
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt

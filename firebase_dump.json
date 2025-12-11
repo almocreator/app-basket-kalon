@@ -1,0 +1,1036 @@
+{
+  "matches": [
+    {
+      "id": "EhpJSDIP8KfqyBItP5gT",
+      "votesNo": 1,
+      "opponent": "CB SAN JUAN DE AZNALFARACHE B",
+      "location": "POLIDEPORTIVO MUNICIPAL 1 DE MAYO, SAN JUAN AZNALFARACHE DE A",
+      "time": "10:00",
+      "votesYes": 9,
+      "date": "2025-12-14"
+    },
+    {
+      "id": "RQTXKHNOqo2f3wgva4Or",
+      "votesYes": 0,
+      "time": "11:00",
+      "date": "2026-01-18",
+      "status": "SCHEDULED",
+      "votesNo": 0,
+      "location": "San Juan - Polideportivo 1 de Mayo",
+      "opponent": "EL DUENDE"
+    },
+    {
+      "id": "S4hhPwQd4BH29GyOfQpR",
+      "date": "2026-01-10",
+      "opponent": "OLIVARES",
+      "status": "SCHEDULED",
+      "time": "17:00",
+      "location": "OLIVARES - Av. San Pablo segundo, s/n",
+      "votesNo": 0,
+      "votesYes": 0
+    },
+    {
+      "id": "TDpOY4J0ZN44TezVbnHm",
+      "awayName": "INSOLAC C.B. ALCALÁ CAJA 87",
+      "isLive": false,
+      "period": 1,
+      "homeTimeouts": 2,
+      "awayScore": 27,
+      "date": "2025-11-29",
+      "homePlayersStats": [
+        {
+          "number": 4,
+          "p1": 0,
+          "name": "Oscar Drg",
+          "fouls": 3,
+          "points": 13,
+          "p2": 2,
+          "onCourt": true,
+          "id": "HOME-0",
+          "p3": 3
+        },
+        {
+          "id": "HOME-1",
+          "p3": 1,
+          "p1": 2,
+          "onCourt": true,
+          "fouls": 2,
+          "p2": 0,
+          "number": 5,
+          "points": 5,
+          "name": "DG BNO"
+        },
+        {
+          "points": 5,
+          "p3": 1,
+          "p1": 0,
+          "name": "Jorge Barba",
+          "number": 6,
+          "onCourt": true,
+          "id": "HOME-2",
+          "p2": 1,
+          "fouls": 2
+        },
+        {
+          "name": "Raul Zayas",
+          "id": "HOME-3",
+          "p1": 0,
+          "onCourt": true,
+          "fouls": 1,
+          "p3": 0,
+          "p2": 3,
+          "number": 7,
+          "points": 6
+        },
+        {
+          "number": 8,
+          "points": 12,
+          "p3": 4,
+          "p2": 0,
+          "p1": 0,
+          "onCourt": true,
+          "id": "HOME-4",
+          "name": "Álvaro Molina",
+          "fouls": 2
+        },
+        {
+          "p3": 0,
+          "p2": 0,
+          "fouls": 0,
+          "p1": 0,
+          "name": "Daniel Fdez Moreno",
+          "id": "HOME-5",
+          "onCourt": false,
+          "number": 9,
+          "points": 0
+        },
+        {
+          "number": 10,
+          "onCourt": false,
+          "id": "HOME-6",
+          "p2": 0,
+          "points": 0,
+          "fouls": 0,
+          "p1": 0,
+          "name": "Manu Villaú",
+          "p3": 0
+        },
+        {
+          "p3": 0,
+          "p2": 0,
+          "onCourt": false,
+          "fouls": 0,
+          "p1": 0,
+          "points": 0,
+          "name": "Alejandro Jimenez Nieto",
+          "id": "HOME-7",
+          "number": 11
+        },
+        {
+          "p1": 0,
+          "onCourt": false,
+          "number": 12,
+          "p3": 0,
+          "id": "HOME-8",
+          "name": "Raúl",
+          "points": 0,
+          "p2": 0,
+          "fouls": 0
+        },
+        {
+          "fouls": 0,
+          "p3": 0,
+          "number": 13,
+          "p1": 0,
+          "p2": 0,
+          "onCourt": false,
+          "name": "Lae",
+          "points": 0,
+          "id": "HOME-9"
+        },
+        {
+          "p1": 0,
+          "p3": 0,
+          "p2": 0,
+          "number": 14,
+          "points": 0,
+          "name": "Camela",
+          "onCourt": false,
+          "id": "HOME-10",
+          "fouls": 0
+        },
+        {
+          "name": "Tobías",
+          "p2": 0,
+          "p3": 0,
+          "number": 15,
+          "onCourt": false,
+          "points": 0,
+          "p1": 0,
+          "fouls": 0,
+          "id": "HOME-11"
+        }
+      ],
+      "startTime": "2025-12-07T17:33:34.961Z",
+      "logs": [
+        {
+          "id": "1765128832686",
+          "points": 3,
+          "period": 1,
+          "team": "HOME",
+          "playerName": "Oscar Drg",
+          "type": "SCORE",
+          "playerId": "HOME-0",
+          "timestamp": "00:12"
+        },
+        {
+          "team": "HOME",
+          "points": 3,
+          "id": "1765128832538",
+          "type": "SCORE",
+          "timestamp": "00:12",
+          "playerName": "Oscar Drg",
+          "playerId": "HOME-0",
+          "period": 1
+        },
+        {
+          "timestamp": "00:10",
+          "type": "SCORE",
+          "playerName": "Oscar Drg",
+          "team": "HOME",
+          "points": 2,
+          "playerId": "HOME-0",
+          "id": "1765128831354",
+          "period": 1
+        },
+        {
+          "points": 3,
+          "type": "SCORE",
+          "timestamp": "00:10",
+          "playerId": "HOME-1",
+          "team": "HOME",
+          "id": "1765128830837",
+          "playerName": "DG BNO",
+          "period": 1
+        },
+        {
+          "points": 2,
+          "period": 1,
+          "playerId": "HOME-2",
+          "type": "SCORE",
+          "timestamp": "00:09",
+          "team": "HOME",
+          "id": "1765128830239",
+          "playerName": "Jorge Barba"
+        },
+        {
+          "playerId": "HOME-3",
+          "points": 2,
+          "id": "1765128829034",
+          "timestamp": "00:08",
+          "period": 1,
+          "playerName": "Raul Zayas",
+          "team": "HOME",
+          "type": "SCORE"
+        },
+        {
+          "type": "FOUL",
+          "id": "1765128828125",
+          "team": "HOME",
+          "timestamp": "00:07",
+          "points": 0,
+          "playerId": "HOME-3",
+          "playerName": "Raul Zayas",
+          "period": 1
+        },
+        {
+          "playerId": "HOME-4",
+          "type": "FOUL",
+          "points": 0,
+          "timestamp": "00:07",
+          "period": 1,
+          "team": "HOME",
+          "playerName": "Álvaro Molina",
+          "id": "1765128827906"
+        },
+        {
+          "playerId": "HOME-4",
+          "type": "FOUL",
+          "id": "1765128827762",
+          "playerName": "Álvaro Molina",
+          "period": 1,
+          "timestamp": "00:07",
+          "team": "HOME",
+          "points": 0
+        },
+        {
+          "playerId": "HOME-0",
+          "period": 1,
+          "type": "FOUL",
+          "team": "HOME",
+          "id": "1765128827138",
+          "points": 0,
+          "playerName": "Oscar Drg",
+          "timestamp": "00:06"
+        },
+        {
+          "id": "1765128827012",
+          "playerId": "HOME-0",
+          "period": 1,
+          "playerName": "Oscar Drg",
+          "points": 0,
+          "team": "HOME",
+          "timestamp": "00:06",
+          "type": "FOUL"
+        },
+        {
+          "type": "FOUL",
+          "timestamp": "00:06",
+          "playerName": "Oscar Drg",
+          "id": "1765128826831",
+          "team": "HOME",
+          "playerId": "HOME-0",
+          "points": 0,
+          "period": 1
+        },
+        {
+          "type": "FOUL",
+          "id": "1765128826556",
+          "period": 1,
+          "playerId": "HOME-1",
+          "timestamp": "00:06",
+          "points": 0,
+          "playerName": "DG BNO",
+          "team": "HOME"
+        },
+        {
+          "type": "FOUL",
+          "period": 1,
+          "id": "1765128826377",
+          "playerId": "HOME-1",
+          "team": "HOME",
+          "points": 0,
+          "playerName": "DG BNO",
+          "timestamp": "00:06"
+        },
+        {
+          "points": 0,
+          "timestamp": "00:05",
+          "period": 1,
+          "playerName": "Jorge Barba",
+          "team": "HOME",
+          "id": "1765128826100",
+          "type": "FOUL",
+          "playerId": "HOME-2"
+        },
+        {
+          "id": "1765128825932",
+          "period": 1,
+          "type": "FOUL",
+          "playerName": "Jorge Barba",
+          "timestamp": "00:05",
+          "playerId": "HOME-2",
+          "team": "HOME",
+          "points": 0
+        },
+        {
+          "playerId": "HOME-2",
+          "playerName": "Jorge Barba",
+          "period": 1,
+          "team": "HOME",
+          "id": "1765128825522",
+          "type": "SCORE",
+          "points": 3,
+          "timestamp": "00:05"
+        },
+        {
+          "period": 1,
+          "type": "SCORE",
+          "timestamp": "00:04",
+          "playerName": "Oscar Drg",
+          "playerId": "HOME-0",
+          "id": "1765128824894",
+          "points": 3,
+          "team": "HOME"
+        },
+        {
+          "period": 1,
+          "points": 2,
+          "type": "SCORE",
+          "timestamp": "00:04",
+          "team": "HOME",
+          "playerId": "HOME-0",
+          "playerName": "Oscar Drg",
+          "id": "1765128824495"
+        },
+        {
+          "team": "HOME",
+          "id": "1765128824185",
+          "type": "SCORE",
+          "points": 1,
+          "playerId": "HOME-1",
+          "playerName": "DG BNO",
+          "timestamp": "00:03",
+          "period": 1
+        },
+        {
+          "points": 1,
+          "playerId": "HOME-1",
+          "type": "SCORE",
+          "period": 1,
+          "id": "1765128824031",
+          "playerName": "DG BNO",
+          "timestamp": "00:03",
+          "team": "HOME"
+        },
+        {
+          "timestamp": "00:03",
+          "playerId": "HOME-3",
+          "period": 1,
+          "playerName": "Raul Zayas",
+          "points": 2,
+          "team": "HOME",
+          "type": "SCORE",
+          "id": "1765128823592"
+        },
+        {
+          "type": "SCORE",
+          "team": "HOME",
+          "points": 2,
+          "period": 1,
+          "timestamp": "00:03",
+          "id": "1765128823446",
+          "playerName": "Raul Zayas",
+          "playerId": "HOME-3"
+        },
+        {
+          "type": "SCORE",
+          "points": 3,
+          "id": "1765128823076",
+          "timestamp": "00:02",
+          "playerName": "Álvaro Molina",
+          "playerId": "HOME-4",
+          "team": "HOME",
+          "period": 1
+        },
+        {
+          "type": "SCORE",
+          "id": "1765128822939",
+          "team": "HOME",
+          "points": 3,
+          "playerId": "HOME-4",
+          "period": 1,
+          "playerName": "Álvaro Molina",
+          "timestamp": "00:02"
+        },
+        {
+          "team": "HOME",
+          "playerId": "HOME-4",
+          "timestamp": "00:02",
+          "points": 3,
+          "type": "SCORE",
+          "id": "1765128822779",
+          "playerName": "Álvaro Molina",
+          "period": 1
+        },
+        {
+          "team": "HOME",
+          "type": "SCORE",
+          "id": "1765128822623",
+          "points": 3,
+          "playerName": "Álvaro Molina",
+          "period": 1,
+          "timestamp": "00:02",
+          "playerId": "HOME-4"
+        }
+      ],
+      "technicalFoulsAway": 0,
+      "location": "PABELLÓN DISTRITO SUR (ALCALÁ DE GUADAIRA)",
+      "time": "20:00",
+      "votesYes": 8,
+      "technicalFoulsHome": 0,
+      "lastUpdate": 1765128845298,
+      "votesNo": 2,
+      "opponent": "INSOLAC C.B. ALCALÁ CAJA 87",
+      "homeName": "CLÍNICA KALON",
+      "awayTimeouts": 2,
+      "gameTimeSeconds": 0,
+      "awayFouls": 0,
+      "homeFouls": 10,
+      "awayPlayersStats": [
+        {
+          "p1": 0,
+          "p2": 0,
+          "id": "AWAY-0",
+          "onCourt": false,
+          "fouls": 0,
+          "name": "JUGADOR 4",
+          "p3": 0,
+          "number": 4,
+          "points": 0
+        },
+        {
+          "points": 0,
+          "number": 5,
+          "fouls": 0,
+          "onCourt": false,
+          "p2": 0,
+          "p1": 0,
+          "id": "AWAY-1",
+          "p3": 0,
+          "name": "JUGADOR 5"
+        },
+        {
+          "points": 0,
+          "name": "JUGADOR 6",
+          "p2": 0,
+          "number": 6,
+          "fouls": 0,
+          "onCourt": false,
+          "id": "AWAY-2",
+          "p1": 0,
+          "p3": 0
+        },
+        {
+          "name": "JUGADOR 7",
+          "fouls": 0,
+          "p3": 0,
+          "number": 7,
+          "onCourt": false,
+          "p2": 0,
+          "id": "AWAY-3",
+          "p1": 0,
+          "points": 0
+        },
+        {
+          "p2": 0,
+          "onCourt": false,
+          "p1": 0,
+          "name": "JUGADOR 8",
+          "fouls": 0,
+          "number": 8,
+          "points": 0,
+          "p3": 0,
+          "id": "AWAY-4"
+        },
+        {
+          "onCourt": false,
+          "fouls": 0,
+          "p3": 0,
+          "number": 9,
+          "p1": 0,
+          "p2": 0,
+          "name": "JUGADOR 9",
+          "id": "AWAY-5",
+          "points": 0
+        },
+        {
+          "number": 10,
+          "id": "AWAY-6",
+          "p3": 0,
+          "fouls": 0,
+          "points": 0,
+          "p2": 0,
+          "onCourt": false,
+          "p1": 0,
+          "name": "JUGADOR 10"
+        },
+        {
+          "number": 11,
+          "p3": 0,
+          "p2": 0,
+          "onCourt": false,
+          "fouls": 0,
+          "name": "JUGADOR 11",
+          "p1": 0,
+          "id": "AWAY-7",
+          "points": 0
+        },
+        {
+          "p3": 0,
+          "fouls": 0,
+          "p2": 0,
+          "points": 0,
+          "name": "JUGADOR 12",
+          "onCourt": false,
+          "number": 12,
+          "p1": 0,
+          "id": "AWAY-8"
+        },
+        {
+          "p3": 0,
+          "points": 0,
+          "fouls": 0,
+          "name": "JUGADOR 13",
+          "number": 13,
+          "onCourt": false,
+          "p2": 0,
+          "p1": 0,
+          "id": "AWAY-9"
+        },
+        {
+          "name": "JUGADOR 14",
+          "p3": 0,
+          "id": "AWAY-10",
+          "onCourt": false,
+          "fouls": 0,
+          "p2": 0,
+          "points": 0,
+          "number": 14,
+          "p1": 0
+        },
+        {
+          "p2": 0,
+          "points": 0,
+          "onCourt": false,
+          "fouls": 0,
+          "name": "JUGADOR 15",
+          "p3": 0,
+          "number": 15,
+          "id": "AWAY-11",
+          "p1": 0
+        }
+      ],
+      "status": "FINISHED",
+      "homeScore": 41,
+      "clockStatus": 0
+    },
+    {
+      "id": "bgnPnsK2WykdKe7pwYVz",
+      "opponent": "EMEZETA",
+      "location": "San Juan - Polideportivo 1 de Mayo",
+      "votesYes": 0,
+      "status": "SCHEDULED",
+      "date": "2025-12-21",
+      "votesNo": 0,
+      "time": "11:30"
+    },
+    {
+      "id": "lWr9pGgB4iviUPyXtR6J",
+      "awayFouls": 0,
+      "gameTimeSeconds": 0,
+      "startTime": "2025-12-07T17:35:10.968Z",
+      "clockStatus": 0,
+      "isLive": false,
+      "time": "21:30",
+      "votesYes": 8,
+      "awayPlayersStats": [
+        {
+          "number": 4,
+          "points": 0,
+          "onCourt": false,
+          "p3": 0,
+          "p2": 0,
+          "fouls": 0,
+          "p1": 0,
+          "id": "AWAY-0",
+          "name": "JUGADOR 4"
+        },
+        {
+          "number": 5,
+          "p1": 0,
+          "name": "JUGADOR 5",
+          "onCourt": false,
+          "id": "AWAY-1",
+          "p3": 0,
+          "fouls": 0,
+          "p2": 0,
+          "points": 0
+        },
+        {
+          "points": 0,
+          "p3": 0,
+          "p1": 0,
+          "p2": 0,
+          "fouls": 0,
+          "onCourt": false,
+          "number": 6,
+          "name": "JUGADOR 6",
+          "id": "AWAY-2"
+        },
+        {
+          "p3": 0,
+          "number": 7,
+          "points": 0,
+          "p1": 0,
+          "name": "JUGADOR 7",
+          "id": "AWAY-3",
+          "onCourt": false,
+          "fouls": 0,
+          "p2": 0
+        },
+        {
+          "onCourt": false,
+          "id": "AWAY-4",
+          "p1": 0,
+          "name": "JUGADOR 8",
+          "p2": 0,
+          "points": 0,
+          "number": 8,
+          "p3": 0,
+          "fouls": 0
+        },
+        {
+          "name": "JUGADOR 9",
+          "points": 0,
+          "p2": 0,
+          "fouls": 0,
+          "onCourt": false,
+          "p3": 0,
+          "p1": 0,
+          "id": "AWAY-5",
+          "number": 9
+        },
+        {
+          "fouls": 0,
+          "id": "AWAY-6",
+          "name": "JUGADOR 10",
+          "points": 0,
+          "number": 10,
+          "p2": 0,
+          "onCourt": false,
+          "p3": 0,
+          "p1": 0
+        },
+        {
+          "p1": 0,
+          "p2": 0,
+          "points": 0,
+          "fouls": 0,
+          "id": "AWAY-7",
+          "number": 11,
+          "name": "JUGADOR 11",
+          "onCourt": false,
+          "p3": 0
+        },
+        {
+          "p2": 0,
+          "p3": 0,
+          "points": 0,
+          "fouls": 0,
+          "onCourt": false,
+          "number": 12,
+          "p1": 0,
+          "name": "JUGADOR 12",
+          "id": "AWAY-8"
+        },
+        {
+          "points": 0,
+          "p1": 0,
+          "number": 13,
+          "p3": 0,
+          "name": "JUGADOR 13",
+          "id": "AWAY-9",
+          "fouls": 0,
+          "p2": 0,
+          "onCourt": false
+        },
+        {
+          "number": 14,
+          "fouls": 0,
+          "points": 0,
+          "p3": 0,
+          "p1": 0,
+          "onCourt": false,
+          "id": "AWAY-10",
+          "name": "JUGADOR 14",
+          "p2": 0
+        },
+        {
+          "id": "AWAY-11",
+          "p3": 0,
+          "p2": 0,
+          "name": "JUGADOR 15",
+          "number": 15,
+          "points": 0,
+          "p1": 0,
+          "onCourt": false,
+          "fouls": 0
+        }
+      ],
+      "opponent": "REAL BETIS ACADEMY ESPARTINAS",
+      "awayScore": 0,
+      "period": 1,
+      "homeName": "CLÍNICA KALON",
+      "logs": [
+        {
+          "timestamp": "00:00",
+          "type": "SCORE",
+          "team": "HOME",
+          "id": "1765128917533",
+          "playerId": "HOME-3",
+          "playerName": "Tobías Belén Perilli",
+          "points": 3,
+          "period": 1
+        },
+        {
+          "playerName": "Tobías Belén Perilli",
+          "timestamp": "00:00",
+          "playerId": "HOME-3",
+          "period": 1,
+          "id": "1765128917378",
+          "team": "HOME",
+          "points": 3,
+          "type": "SCORE"
+        },
+        {
+          "type": "SCORE",
+          "points": 3,
+          "period": 1,
+          "timestamp": "00:00",
+          "id": "1765128917210",
+          "playerId": "HOME-3",
+          "playerName": "Tobías Belén Perilli",
+          "team": "HOME"
+        },
+        {
+          "id": "1765128917063",
+          "team": "HOME",
+          "type": "SCORE",
+          "period": 1,
+          "playerId": "HOME-3",
+          "timestamp": "00:00",
+          "points": 3,
+          "playerName": "Tobías Belén Perilli"
+        },
+        {
+          "playerName": "Tobías Belén Perilli",
+          "period": 1,
+          "points": 3,
+          "id": "1765128916893",
+          "playerId": "HOME-3",
+          "timestamp": "00:00",
+          "team": "HOME",
+          "type": "SCORE"
+        },
+        {
+          "id": "1765128916721",
+          "points": 3,
+          "playerName": "Tobías Belén Perilli",
+          "timestamp": "00:00",
+          "team": "HOME",
+          "playerId": "HOME-3",
+          "type": "SCORE",
+          "period": 1
+        },
+        {
+          "points": 3,
+          "timestamp": "00:00",
+          "id": "1765128916558",
+          "period": 1,
+          "playerId": "HOME-3",
+          "type": "SCORE",
+          "playerName": "Tobías Belén Perilli",
+          "team": "HOME"
+        },
+        {
+          "period": 1,
+          "timestamp": "00:00",
+          "playerId": "HOME-3",
+          "type": "SCORE",
+          "team": "HOME",
+          "id": "1765128916420",
+          "playerName": "Tobías Belén Perilli",
+          "points": 3
+        },
+        {
+          "timestamp": "00:00",
+          "playerName": "Tobías Belén Perilli",
+          "playerId": "HOME-3",
+          "period": 1,
+          "points": 3,
+          "type": "SCORE",
+          "id": "1765128916261",
+          "team": "HOME"
+        },
+        {
+          "period": 1,
+          "id": "1765128916088",
+          "playerId": "HOME-3",
+          "timestamp": "00:00",
+          "team": "HOME",
+          "points": 3,
+          "type": "SCORE",
+          "playerName": "Tobías Belén Perilli"
+        },
+        {
+          "team": "HOME",
+          "playerId": "HOME-3",
+          "type": "SCORE",
+          "period": 1,
+          "id": "1765128915944",
+          "points": 3,
+          "playerName": "Tobías Belén Perilli",
+          "timestamp": "00:00"
+        },
+        {
+          "playerId": "HOME-3",
+          "points": 3,
+          "playerName": "Tobías Belén Perilli",
+          "timestamp": "00:00",
+          "type": "SCORE",
+          "period": 1,
+          "team": "HOME",
+          "id": "1765128915790"
+        }
+      ],
+      "date": "2025-12-04",
+      "awayName": "REAL BETIS ACADEMY ESPARTINAS",
+      "votesNo": 3,
+      "technicalFoulsHome": 0,
+      "homeScore": 36,
+      "homeFouls": 0,
+      "homePlayersStats": [
+        {
+          "number": 4,
+          "fouls": 0,
+          "name": "Oscar Drg",
+          "onCourt": true,
+          "points": 0,
+          "id": "HOME-0",
+          "p3": 0,
+          "p2": 0,
+          "p1": 0
+        },
+        {
+          "p3": 0,
+          "fouls": 0,
+          "name": "DG BNO",
+          "points": 0,
+          "number": 5,
+          "id": "HOME-1",
+          "p2": 0,
+          "onCourt": true,
+          "p1": 0
+        },
+        {
+          "id": "HOME-2",
+          "fouls": 0,
+          "name": "Jorge Barba",
+          "p1": 0,
+          "p3": 0,
+          "points": 0,
+          "number": 6,
+          "onCourt": true,
+          "p2": 0
+        },
+        {
+          "number": 7,
+          "onCourt": true,
+          "name": "Tobías Belén Perilli",
+          "id": "HOME-3",
+          "p1": 0,
+          "p3": 12,
+          "fouls": 0,
+          "points": 36,
+          "p2": 0
+        },
+        {
+          "name": "Raul Zayas",
+          "fouls": 0,
+          "p1": 0,
+          "points": 0,
+          "number": 8,
+          "p2": 0,
+          "p3": 0,
+          "onCourt": true,
+          "id": "HOME-4"
+        },
+        {
+          "onCourt": false,
+          "fouls": 0,
+          "id": "HOME-5",
+          "points": 0,
+          "p3": 0,
+          "number": 9,
+          "p1": 0,
+          "p2": 0,
+          "name": "Daniel Fdez Moreno"
+        },
+        {
+          "p2": 0,
+          "onCourt": false,
+          "points": 0,
+          "fouls": 0,
+          "name": "Manu Villaú",
+          "number": 10,
+          "p3": 0,
+          "id": "HOME-6",
+          "p1": 0
+        },
+        {
+          "points": 0,
+          "name": "Álvaro Molina",
+          "number": 11,
+          "p1": 0,
+          "p3": 0,
+          "id": "HOME-7",
+          "onCourt": false,
+          "fouls": 0,
+          "p2": 0
+        },
+        {
+          "p1": 0,
+          "number": 12,
+          "onCourt": false,
+          "id": "HOME-8",
+          "p2": 0,
+          "fouls": 0,
+          "name": "Raúl",
+          "p3": 0,
+          "points": 0
+        },
+        {
+          "p1": 0,
+          "number": 13,
+          "onCourt": false,
+          "p2": 0,
+          "name": "Lae",
+          "points": 0,
+          "p3": 0,
+          "id": "HOME-9",
+          "fouls": 0
+        },
+        {
+          "fouls": 0,
+          "p1": 0,
+          "p3": 0,
+          "points": 0,
+          "name": "Camela",
+          "number": 14,
+          "id": "HOME-10",
+          "p2": 0,
+          "onCourt": false
+        },
+        {
+          "onCourt": false,
+          "p2": 0,
+          "name": "Tobías",
+          "p3": 0,
+          "fouls": 0,
+          "points": 0,
+          "p1": 0,
+          "id": "HOME-11",
+          "number": 15
+        }
+      ],
+      "technicalFoulsAway": 0,
+      "location": "AV. TABLANTES, 2, 41807, ESPARTINAS",
+      "status": "FINISHED",
+      "lastUpdate": 1765128917536,
+      "homeTimeouts": 2,
+      "awayTimeouts": 2
+    }
+  ],
+  "asistencias": [
+    {
+      "id": "0vJWhucPJWf5YpcU66N0"
+    },
+    {
+      "id": "AsistenciasID",
+      "votosNo": 0,
+      "Pregunta": "¿Vas al partido?",
+      "votosSi": 1
+    }
+  ]
+}
