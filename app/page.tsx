@@ -20,23 +20,16 @@ export default async function Home() {
         )}
       </div>
 
-      {!session?.user ? (
-        <div className="text-center py-12">
-          <p className="mb-4 text-lg">Inicia sesión para ver y votar en los partidos.</p>
-          <SignIn />
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {matches.map((match) => (
-            <MatchCard key={match.id} match={match} currentUser={session.user} />
-          ))}
-          {matches.length === 0 && (
-            <div className="col-span-full text-center py-12 text-gray-500">
-              No hay partidos programados.
-            </div>
-          )}
-        </div>
-      )}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {matches.map((match) => (
+          <MatchCard key={match.id} match={match} currentUser={session?.user} />
+        ))}
+        {matches.length === 0 && (
+          <div className="col-span-full text-center py-12 text-gray-500">
+            No hay partidos programados.
+          </div>
+        )}
+      </div>
     </div>
   );
 }

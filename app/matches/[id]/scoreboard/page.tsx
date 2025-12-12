@@ -13,10 +13,10 @@ interface ScoreboardPageProps {
 export default async function ScoreboardPage({ params }: ScoreboardPageProps) {
     const session = await auth();
 
-    // Strict Auth Check: Only logged in users can manage the scoreboard
-    if (!session?.user) {
-        redirect("/api/auth/signin");
-    }
+    // Auth check removed to allow public viewing
+    // if (!session?.user) {
+    //     redirect("/api/auth/signin");
+    // }
 
     const match = await prisma.match.findUnique({
         where: { id: params.id },
