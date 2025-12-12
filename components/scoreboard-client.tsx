@@ -38,6 +38,7 @@ interface GameState {
 interface ScoreboardClientProps {
     matchId: string;
     initialData: any; // The full match object
+    isReadOnly?: boolean;
 }
 
 // --- Helpers ---
@@ -49,13 +50,13 @@ const formatTime = (seconds: number) => {
     return `${m.toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`;
 };
 
-export function ScoreboardClient({ matchId, initialData }: ScoreboardClientProps) {
+export function ScoreboardClient({ matchId, initialData, isReadOnly = false }: ScoreboardClientProps) {
     const router = useRouter();
     const [isSaving, setIsSaving] = useState(false);
 
     // Initialize State from DB or Default
-    const [gameState, setGameState] = useState<GameState>(() => {
-        const details = initialData.details as any;
+    const initializeState = (data: any) => {
+        const details = data.details as any;
         if (details && details.gameState) {
             return details.gameState;
         }
@@ -76,21 +77,38 @@ export function ScoreboardClient({ matchId, initialData }: ScoreboardClientProps
             timerSeconds: INITIAL_TIME,
             isTimerRunning: false,
             home: {
-                name: initialData.homeName || "LOCAL",
-                score: initialData.homeScore || 0,
+                name: data.homeName || "LOCAL",
+                score: data.homeScore || 0,
                 fouls: 0,
                 timeouts: 0,
                 players: createMockPlayers("home")
             },
             away: {
-                name: initialData.awayName || initialData.opponent || "VISITANTE",
-                score: initialData.awayScore || 0,
+                name: data.awayName || data.opponent || "VISITANTE",
+                score: data.awayScore || 0,
                 fouls: 0,
                 timeouts: 0,
                 players: createMockPlayers("away")
             }
         };
-    });
+    };
+
+    const [gameState, setGameState] = useState<GameState>(() => initializeState(initialData));
+
+    // Sync state when initialData updates (via polling)
+    useEffect(() => {
+        setGameState(initializeState(initialData));
+    }, [initialData]);
+
+    // --- Polling for ReadOnly Users ---
+    useEffect(() => {
+        if (isReadOnly) {
+            const interval = setInterval(() => {
+                router.refresh();
+            }, 5000); // 5 seconds polling
+            return () => clearInterval(interval);
+        }
+    }, [isReadOnly, router]);
 
     // --- Timer Logic ---
     useEffect(() => {
@@ -170,22 +188,25 @@ export function ScoreboardClient({ matchId, initialData }: ScoreboardClientProps
                 </div>
 
                 {/* Points Buttons */}
-                <div className="grid grid-cols-3 gap-2">
-                    <Button onClick={() => updateScore(teamKey, 1)} className={`bg-${colorClass}-600 hover:bg-${colorClass}-700 text-white font-bold text-xl h-16`}>+1</Button>
-                    <Button onClick={() => updateScore(teamKey, 2)} className={`bg-${colorClass}-600 hover:bg-${colorClass}-700 text-white font-bold text-xl h-16`}>+2</Button>
-                    <Button onClick={() => updateScore(teamKey, 3)} className={`bg-${colorClass}-600 hover:bg-${colorClass}-700 text-white font-bold text-xl h-16`}>+3</Button>
-                    <Button onClick={() => updateScore(teamKey, -1)} variant="outline" className="border-gray-700 text-gray-400">-1</Button>
-                    <Button onClick={() => updateScore(teamKey, -2)} variant="outline" className="border-gray-700 text-gray-400">-2</Button>
-                    <Button onClick={() => updateScore(teamKey, -3)} variant="outline" className="border-gray-700 text-gray-400">-3</Button>
-                </div>
+                {!isReadOnly && (
+                    <div className="grid grid-cols-3 gap-2">
+                        <Button onClick={() => updateScore(teamKey, 1)} className={`bg-${colorClass}-600 hover:bg-${colorClass}-700 text-white font-bold text-xl h-16`}>+1</Button>
+                        <Button onClick={() => updateScore(teamKey, 2)} className={`bg-${colorClass}-600 hover:bg-${colorClass}-700 text-white font-bold text-xl h-16`}>+2</Button>
+                        <Button onClick={() => updateScore(teamKey, 3)} className={`bg-${colorClass}-600 hover:bg-${colorClass}-700 text-white font-bold text-xl h-16`}>+3</Button>
+                        <Button onClick={() => updateScore(teamKey, -1)} variant="outline" className="border-gray-700 text-gray-400">-1</Button>
+                        <Button onClick={() => updateScore(teamKey, -2)} variant="outline" className="border-gray-700 text-gray-400">-2</Button>
+                        <Button onClick={() => updateScore(teamKey, -3)} variant="outline" className="border-gray-700 text-gray-400">-3</Button>
+                    </div>
+                )}
+
 
                 {/* Foul Control */}
                 <div className="bg-gray-900 rounded-lg p-3 mt-4 flex items-center justify-between">
                     <span className="text-gray-400 uppercase text-xs font-bold tracking-widest">Faltas de Equipo</span>
                     <div className="flex items-center gap-3">
-                        <Button size="icon" variant="outline" className="h-8 w-8 border-gray-700" onClick={() => updateFouls(teamKey, -1)}><Minus className="h-4 w-4" /></Button>
+                        {!isReadOnly && <Button size="icon" variant="outline" className="h-8 w-8 border-gray-700" onClick={() => updateFouls(teamKey, -1)}><Minus className="h-4 w-4" /></Button>}
                         <span className={`text-3xl font-bold ${team.fouls >= 5 ? "text-red-500 animate-pulse" : "text-white"}`}>{team.fouls}</span>
-                        <Button size="icon" variant="outline" className="h-8 w-8 border-gray-700" onClick={() => updateFouls(teamKey, 1)}><Plus className="h-4 w-4" /></Button>
+                        {!isReadOnly && <Button size="icon" variant="outline" className="h-8 w-8 border-gray-700" onClick={() => updateFouls(teamKey, 1)}><Plus className="h-4 w-4" /></Button>}
                     </div>
                 </div>
 
@@ -226,9 +247,27 @@ export function ScoreboardClient({ matchId, initialData }: ScoreboardClientProps
                     <ArrowLeft className="h-4 w-4" /> Volver
                 </Button>
                 <div className="flex gap-4">
-                    <Button variant={isSaving ? "secondary" : "default"} onClick={saveGame} disabled={isSaving} className="bg-green-600 hover:bg-green-700 text-white min-w-[120px]">
-                        {isSaving ? "Guardando..." : <><Save className="h-4 w-4 mr-2" /> Guardar</>}
-                    </Button>
+                    {!isReadOnly ? (
+                        <>
+                            <Button
+                                variant="secondary"
+                                className="bg-blue-900 text-blue-100 hover:bg-blue-800"
+                                onClick={() => {
+                                    navigator.clipboard.writeText(window.location.href);
+                                    alert("¡Enlace copiado! Pásalo al público.");
+                                }}
+                            >
+                                🔗 Compartir
+                            </Button>
+                            <Button variant={isSaving ? "secondary" : "default"} onClick={saveGame} disabled={isSaving} className="bg-green-600 hover:bg-green-700 text-white min-w-[120px]">
+                                {isSaving ? "Guardando..." : <><Save className="h-4 w-4 mr-2" /> Guardar</>}
+                            </Button>
+                        </>
+                    ) : (
+                        <Badge variant="outline" className="text-green-500 border-green-500 animate-pulse">
+                            ● EN VIVO
+                        </Badge>
+                    )}
                 </div>
             </header>
 
@@ -241,9 +280,9 @@ export function ScoreboardClient({ matchId, initialData }: ScoreboardClientProps
                     <div className="text-center w-full">
                         <div className="text-gray-500 uppercase text-xs tracking-widest mb-1">Periodo</div>
                         <div className="flex items-center justify-center gap-4 bg-gray-900 rounded p-2">
-                            <Button size="icon" variant="ghost" className="h-8 w-8 text-gray-400" onClick={() => updatePeriod(-1)} disabled={gameState.period <= 1}>&lt;</Button>
+                            {!isReadOnly && <Button size="icon" variant="ghost" className="h-8 w-8 text-gray-400" onClick={() => updatePeriod(-1)} disabled={gameState.period <= 1}>&lt;</Button>}
                             <span className="text-4xl font-bold text-yellow-500 font-mono">{gameState.period}</span>
-                            <Button size="icon" variant="ghost" className="h-8 w-8 text-gray-400" onClick={() => updatePeriod(1)} disabled={gameState.period >= 4}>&gt;</Button>
+                            {!isReadOnly && <Button size="icon" variant="ghost" className="h-8 w-8 text-gray-400" onClick={() => updatePeriod(1)} disabled={gameState.period >= 4}>&gt;</Button>}
                         </div>
                     </div>
 
@@ -252,18 +291,20 @@ export function ScoreboardClient({ matchId, initialData }: ScoreboardClientProps
                         <div className={`text-6xl font-mono font-bold tracking-widest mb-4 p-4 rounded bg-black border ${gameState.isTimerRunning ? "border-green-900 text-green-500 shadow-[0_0_15px_rgba(0,255,0,0.2)]" : "border-gray-800 text-gray-300"}`}>
                             {formatTime(gameState.timerSeconds)}
                         </div>
-                        <div className="flex gap-2 justify-center">
-                            <Button
-                                size="lg"
-                                className={`w-32 font-bold text-lg ${gameState.isTimerRunning ? "bg-red-900 text-red-100 hover:bg-red-800" : "bg-green-800 text-green-100 hover:bg-green-700"}`}
-                                onClick={toggleTimer}
-                            >
-                                {gameState.isTimerRunning ? <><Pause className="mr-2 h-5 w-5" /> PAUSA</> : <><Play className="mr-2 h-5 w-5" /> INICIAR</>}
-                            </Button>
-                            <Button size="icon" variant="outline" className="border-gray-700 bg-gray-900 text-gray-400 hover:text-white" onClick={resetTimer}>
-                                <RotateCcw className="h-5 w-5" />
-                            </Button>
-                        </div>
+                        {!isReadOnly && (
+                            <div className="flex gap-2 justify-center">
+                                <Button
+                                    size="lg"
+                                    className={`w-32 font-bold text-lg ${gameState.isTimerRunning ? "bg-red-900 text-red-100 hover:bg-red-800" : "bg-green-800 text-green-100 hover:bg-green-700"}`}
+                                    onClick={toggleTimer}
+                                >
+                                    {gameState.isTimerRunning ? <><Pause className="mr-2 h-5 w-5" /> PAUSA</> : <><Play className="mr-2 h-5 w-5" /> INICIAR</>}
+                                </Button>
+                                <Button size="icon" variant="outline" className="border-gray-700 bg-gray-900 text-gray-400 hover:text-white" onClick={resetTimer}>
+                                    <RotateCcw className="h-5 w-5" />
+                                </Button>
+                            </div>
+                        )}
                     </div>
 
                     {/* Possession Arrow (Mock) */}

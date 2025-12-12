@@ -26,7 +26,9 @@ export default async function ScoreboardPage({ params }: ScoreboardPageProps) {
         notFound();
     }
 
+    const isReadOnly = !session?.user;
+
     return (
-        <ScoreboardClient matchId={match.id} initialData={match} />
+        <ScoreboardClient matchId={match.id} initialData={match} isReadOnly={isReadOnly} />
     );
 }
