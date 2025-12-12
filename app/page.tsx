@@ -12,7 +12,7 @@ export default async function Home() {
   return (
     <div className="container mx-auto py-8 px-4">
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold">Próximos Partidos</h1>
+        <h1 className="text-3xl font-bold text-white">Próximos Partidos</h1>
         {session?.user && (
           <Button asChild>
             <Link href="/matches/new">Crear Partido</Link>

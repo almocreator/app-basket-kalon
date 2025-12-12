@@ -39,9 +39,9 @@ export function MatchCard({ match, currentUser }: MatchCardProps) {
                 </div>
 
                 <CardTitle className="text-lg leading-tight flex flex-col gap-1 items-center">
-                    <span className="text-gray-900">{homeName}</span>
+                    <span className="text-foreground font-bold">{homeName}</span>
                     <span className="text-sm text-gray-400 font-normal">vs</span>
-                    <span className="text-gray-900">{awayName}</span>
+                    <span className="text-foreground font-bold">{awayName}</span>
                 </CardTitle>
 
                 <CardDescription className="pt-2">
@@ -52,15 +52,15 @@ export function MatchCard({ match, currentUser }: MatchCardProps) {
             </CardHeader>
             <CardContent className="flex-grow">
                 {isFinished ? (
-                    <div className="flex justify-center items-center gap-6 py-4 bg-gray-50 rounded-lg mb-4">
+                    <div className="flex justify-center items-center gap-6 py-4 bg-muted/20 rounded-lg mb-4">
                         <div className="text-center">
-                            <span className="block text-3xl font-bold text-gray-800">{match.homeScore}</span>
-                            <span className="text-xs text-gray-500">Local</span>
+                            <span className="block text-3xl font-bold text-foreground">{match.homeScore}</span>
+                            <span className="text-xs text-muted-foreground">Local</span>
                         </div>
-                        <div className="text-gray-300 text-2xl">-</div>
+                        <div className="text-muted-foreground text-2xl">-</div>
                         <div className="text-center">
-                            <span className="block text-3xl font-bold text-gray-800">{match.awayScore}</span>
-                            <span className="text-xs text-gray-500">Visitante</span>
+                            <span className="block text-3xl font-bold text-foreground">{match.awayScore}</span>
+                            <span className="text-xs text-muted-foreground">Visitante</span>
                         </div>
                     </div>
                 ) : (
@@ -92,8 +92,8 @@ export function MatchCard({ match, currentUser }: MatchCardProps) {
 
             </CardContent>
             <CardFooter className="flex justify-between gap-2 pt-0">
-                {!isFinished && currentUser ? (
-                    <>
+                <div className="flex flex-col gap-2 w-full">
+                    {!isFinished && currentUser ? (
                         <div className="flex gap-2 w-full">
                             <Button
                                 variant={userVote?.attendance === true ? "default" : "outline"}
@@ -112,18 +112,19 @@ export function MatchCard({ match, currentUser }: MatchCardProps) {
                                 No
                             </Button>
                         </div>
-                        {/* Admin/Scoreboard Button */}
-                        <a href={`/matches/${match.id}/scoreboard`} className="w-full">
-                            <Button variant="secondary" size="sm" className="w-full mt-2 bg-slate-800 text-white hover:bg-slate-700">
-                                🏀 Abrir Marcador
-                            </Button>
-                        </a>
-                    </>
-                ) : !currentUser ? (
-                    <p className="text-sm text-gray-500 w-full text-center">Inicia sesión para votar</p>
-                ) : (
-                    <p className="text-xs text-gray-400 w-full text-center">Partido finalizado</p>
-                )}
+                    ) : !currentUser ? (
+                        <p className="text-sm text-gray-500 w-full text-center">Inicia sesión para votar</p>
+                    ) : (
+                        <p className="text-xs text-gray-400 w-full text-center">Partido finalizado</p>
+                    )}
+
+                    {/* Admin/Scoreboard Button - Always Visible */}
+                    <a href={`/matches/${match.id}/scoreboard`} className="w-full">
+                        <Button variant="secondary" size="sm" className="w-full bg-slate-800 text-white hover:bg-slate-700">
+                            🏀 Abrir Marcador
+                        </Button>
+                    </a>
+                </div>
             </CardFooter>
         </Card>
     );
